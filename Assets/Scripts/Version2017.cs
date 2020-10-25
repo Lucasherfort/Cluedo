@@ -5,13 +5,14 @@ using UnityEngine.UI;
 
 public class Version2017 : MonoBehaviour
 {
-        public Sprite Normal;
+    public Sprite Normal;
     public Sprite CheckGreen;
     public Sprite CroixRouge;
     public Sprite PointInterrogation;
 
     public GameObject MenuChooseImage;
     public GameObject[] BarImage;
+    public GameObject[] GridElements;
 
     string ImageSelected;
     string ImageTagSelected;
@@ -281,6 +282,27 @@ public class Version2017 : MonoBehaviour
             case "Bureau":
                 BarImage[20].SetActive(false);
                 break;
+        }
+    }
+
+    public void resetButton()
+    {
+        // Remove Image
+        foreach (GameObject item in GridElements)
+        {
+            if(item.GetComponent<Image>().sprite != Normal)
+            {
+                item.GetComponent<Image>().sprite = Normal;
+            }
+        }
+
+        // Remove Bar
+        foreach (GameObject item in BarImage)
+        {
+            if(item.activeSelf == true)
+            {
+                item.SetActive(false);
+            }
         }
     }
 }
