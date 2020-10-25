@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Olive
+  - Moutarde
+  - "Orchid\xE9e"
+  - Pervenche
+  - Violet
+  - Rose
+  - Chandelier
+  - Poignard
+  - Barre de fer
+  - "R\xE9volver"
+  - Corde
+  - "Cl\xE9 anglaise"
+  - "Salle de r\xE9ception"
+  - Salle de billard
+  - Jardin d'hiver
+  - "Salle \xE0 manger"
+  - "Entr\xE9e"
+  - Cuisine
+  - "Biblioth\xE8que"
+  - Salon
+  - Bureau
+  - Leblanc
+  - Salle de bain
+  - Salle de jeux
+  - Chambre
+  - Garage
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
