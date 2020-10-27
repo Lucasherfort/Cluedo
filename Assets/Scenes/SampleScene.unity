@@ -29591,6 +29591,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1593790973}
   ChoixVersion: {fileID: 2091408300}
+  V2012: {fileID: 1433011389}
+  V2015: {fileID: 679056895}
+  V2017: {fileID: 1507898865}
 --- !u!1 &921630846
 GameObject:
   m_ObjectHideFlags: 0
@@ -50237,7 +50240,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1507898866
 Transform:
   m_ObjectHideFlags: 0
