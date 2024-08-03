@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class Version2015 : MonoBehaviour
 {
@@ -9,10 +10,12 @@ public class Version2015 : MonoBehaviour
     public Sprite CheckGreen;
     public Sprite CroixRouge;
     public Sprite PointInterrogation;
+    public Sprite RedSurround;
 
     public GameObject MenuChooseImage;
     public GameObject[] BarImage;
     public GameObject[] GridElements;
+    public GameObject[] GameElements;    
 
     string ImageSelected;
     string ImageTagSelected;
@@ -29,17 +32,17 @@ public class Version2015 : MonoBehaviour
             {
                 if (clavier.text == "")
                 {
-                    GameObject.Find(ImageNameSelected).GetComponentInChildren<Text>().text = "...";
+                    GameObject.Find(ImageNameSelected).GetComponentInChildren<TMP_Text>().text = "...";
                 }
 
                 else if (clavier.text.Length > 3)
                 {
-                    GameObject.Find(ImageNameSelected).GetComponentInChildren<Text>().text = "...";
+                    GameObject.Find(ImageNameSelected).GetComponentInChildren<TMP_Text>().text = "...";
                 }
 
                 else
                 {
-                    GameObject.Find(ImageNameSelected).GetComponentInChildren<Text>().text = clavier.text.ToUpper();
+                    GameObject.Find(ImageNameSelected).GetComponentInChildren<TMP_Text>().text = clavier.text.ToUpper();
                 }
                 clavier = null;
                 ImageNameSelected = "";
@@ -91,6 +94,18 @@ public class Version2015 : MonoBehaviour
 
         ImageSelected = "";
         MenuChooseImage.SetActive(false);
+    }
+
+    public void SurroundElement(Image image)
+    {
+        if(image.sprite == Normal)
+        {
+            GameObject.Find(image.name).GetComponent<Image>().sprite = RedSurround;
+        }
+        else
+        {
+            GameObject.Find(image.name).GetComponent<Image>().sprite = Normal;
+        }
     }
 
     public void OpenKeyBoardAndroid(Image image)
@@ -289,6 +304,14 @@ public class Version2015 : MonoBehaviour
     {
         // Remove Image
         foreach (GameObject item in GridElements)
+        {
+            if(item.GetComponent<Image>().sprite != Normal)
+            {
+                item.GetComponent<Image>().sprite = Normal;
+            }
+        }
+
+        foreach (GameObject item in GameElements)
         {
             if(item.GetComponent<Image>().sprite != Normal)
             {
